@@ -6,7 +6,7 @@ exports.register = function (server, options, next){
       handler: function(request, reply){
         reply.view('index'); // look for templates/index.html
       }
-    },
+    },  
     {
       method: 'GET',
       path: '/public/{path*}', // there may be other files, e.g. css in public directory
