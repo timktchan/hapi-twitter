@@ -21,14 +21,10 @@ $(document).ready(function(){
     },
     dataType:'Json',
 
-
     success: function(response){
       $('.username').text(response.Title + ' (' + response.Released + ')');
     }
   });
   
-
-
-
 
 });

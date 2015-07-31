@@ -9,9 +9,10 @@ module.exports.authenticated = function(request, callback){
 
   // 1. retrieve session_id from cookie
   var cookie = request.session.get('hapi_twitter_session');
+  var msg = 'Unauthorized access detected. Shutdown imminent.';
 
   if (!cookie) {
-    return callback({ authenticated: false});
+    return callback({ authenticated: false, message: msg});
   }
 
   var session_id = cookie.session_id;
